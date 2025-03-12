@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom RichMedia builder</title>
+    
+    <meta property="og:title" content="Custom RichMedia builder">
+    <meta property="og:description" content="Create custom media notifications in your browser with custom images and text">
+    <meta property="og:image" content="https://images.dpip.lol/logo.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Media Notification Tool">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom RichMedia builder">
+    <meta name="twitter:description" content="Create custom media notifications in your browser with custom images and text">
+    <meta name="twitter:image" content="https://images.dpip.lol/logo.png">
+    
+    <link rel="icon" href="https://images.dpip.lol/logo.png" type="image/png">
+    <link rel="shortcut icon" href="https://images.dpip.lol/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://images.dpip.lol/logo.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h1><i class="ri-notification-4-line"></i> Custom Media Notification</h1>
+    
+    <div class="card">
+        <div class="form-group">
+            <label><i class="ri-music-line"></i> Title:</label>
+            <input type="text" id="title" placeholder="Song Title">
+        </div>
+        
+        <div class="form-group">
+            <label><i class="ri-user-line"></i> Artist:</label>
+            <input type="text" id="artist" placeholder="Artist Name">
+        </div>
+        
+        <div class="form-group">
+            <label><i class="ri-image-line"></i> Cover Image:</label>
+            <div class="image-options">
+                <button id="upload-option"><i class="ri-upload-2-line"></i> Upload Image</button>
+                <button id="url-option-btn"><i class="ri-link"></i> Use URL</button>
+                <button id="color-option"><i class="ri-palette-line"></i> Use Color</button>
+            </div>
+            
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            
+            <div class="url-option" id="url-input-container">
+                <div class="url-input-group">
+                    <input type="text" id="image-url" placeholder="Enter image URL">
+                    <button id="load-url"><i class="ri-download-line"></i> Load</button>
+                </div>
+            </div>
+            
+            <div class="url-option" id="color-input-container">
+                <input type="color" id="image-color" value="#ff0000">
+            </div>
+            
+            <div class="image-preview-container">
+                <img id="image-preview" src="" alt="Image preview">
+            </div>
+        </div>
+        
+        <div class="buttons-container">
+            <div class="main-buttons">
+                <button id="create-button"><i class="ri-notification-badge-line"></i> Create Notification</button>
+                <button id="stop-button"><i class="ri-stop-circle-line"></i> Stop</button>
+            </div>
+        </div>
+        
+        <div id="status" class="status">Ready to create notification</div>
+    </div>
+    
+    <audio id="audio-element" style="display: none;" loop>
+        <source src="assets/audio/blank.mp3" type="audio/mpeg">
+        <source src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAADQADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAAHlHM3VC0AFQAANIAAAARVydQdVrQAUAAA0gAAABETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
+    </audio>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
