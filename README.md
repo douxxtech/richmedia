@@ -2,7 +2,7 @@
   <a href="https://richmedia.dpip.lol" style="display: block; text-align: center;">
     <img
       alt="Image of this repo"
-      src="https://togp.xyz?owner=douxxtech&repo=richmedia&theme=json-dark-all&cache=false"
+      src="https://togp.xyz?owner=douxxtech&repo=richmedia&bash-dark-all&cache=false"
       type="image/svg+xml"
       style="border-radius: 20px; overflow: hidden;"
     />
